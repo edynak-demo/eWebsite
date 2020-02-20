@@ -1,7 +1,29 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+10.times do |tutorial|
+	Tutorial.create!(
+		title: "Sample Tutorial Post #{tutorial}",
+		body: "Welcome to my generic tutorial dummy information. Whether HTML, CSS, Javascript, Ruby, Rails, PHP, Node.JS, mongoDB, mysql, postgresql, React, and React Native tutorials that I will be not only offering but also I will be inclunding instructional how to tutorials on each of these subjects. Like always if you have any questions please comment below or go to the contact me page to message me directly. Enjoy and goodluck on your coding journey"
+	)
+end
+
+puts "10 sample tutorial posts created"
+
+5.times do |skill|
+	Skill.create!(
+		title: "Rails #{skill}",
+		level_percentage: 15
+		)
+end
+
+puts "5 sample skills created"
+
+16.times do |portfolio_item|
+	Portfolio.create!(
+		title: "Portfolio title: #{portfolio_item}",
+        subtitle: "My great service",
+        body: "Check out this portfolio section on each of these images. Please leave feedback in the contact me page. Thanks for checking out my website!!!",
+        main_image: "http://placehold.it/600x400",
+        thumb_image: "http://placehold.it/350x200"
+  )
+end
+
+put "16 sample portfolio items created"

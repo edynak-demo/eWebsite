@@ -21,8 +21,8 @@ puts "5 sample skills created"
 		title: "Portfolio title: #{portfolio_item}",
         subtitle: "My great service",
         body: "Check out this portfolio section on each of these images. Please leave feedback in the contact me page. Thanks for checking out my website!!!",
-        main_image: "http://placehold.it/600x400",
-        thumb_image: "http://placehold.it/350x200"
+        main_image: "https://place-hold.it/640x360",
+        thumb_image: "https://place-hold.it/350x200"
   )
 end
 

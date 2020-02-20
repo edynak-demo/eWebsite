@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   resources :portfolios
-  get 'pages/home'
-  get 'pages/about'
-  get 'pages/contact'
-  get 'pages/news'
-  get 'pages/store'
+  
+  get 'about', to: 'pages#about'
+  get 'contact', to: 'pages#contact'
+  get 'news', to: 'pages#news'
+  get 'store', to: 'pages#store'
   resources :tutorials
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  root to: 'pages#home'
 end

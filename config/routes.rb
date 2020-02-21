@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
+  get 'services', to: 'pages#services'
   get 'news', to: 'pages#news'
   get 'store', to: 'pages#store'
   resources :tutorials do

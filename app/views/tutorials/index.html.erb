@@ -14,7 +14,7 @@
   <tbody>
     <% @tutorials.each do |tutorial| %>
       <tr>
-        <td><%= tutorial.title %></td>
+        <td><%= tutorial.title.upcase %></td>
         <td><%= tutorial.body %></td>
         <td><%= link_to tutorial.status, toggle_status_tutorial_path(tutorial) %></td>
         <td><%= link_to 'Show', tutorial %></td>

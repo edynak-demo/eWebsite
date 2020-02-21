@@ -1,5 +1,5 @@
 class TutorialsController < ApplicationController
-  before_action :set_tutorial, only: [:show, :edit, :update, :destroy]
+  before_action :set_tutorial, only: [:show, :edit, :update, :destroy, :toggle_status]
 
   # GET /tutorials
   # GET /tutorials.json
@@ -61,6 +61,16 @@ class TutorialsController < ApplicationController
     end
   end
 
+  def toggle_status
+    if @tutorial.draft?
+      @tutorial.published!
+    elsif @tutorial.published?
+      @tutorial.draft!
+    end
+        
+    redirect_to tutorials_url, notice: 'Your post status has been updated successfully...'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tutorial
@@ -71,4 +81,4 @@ class TutorialsController < ApplicationController
     def tutorial_params
       params.require(:tutorial).permit(:title, :body)
     end
-end
+  end

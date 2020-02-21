@@ -1,29 +1,48 @@
-10.times do |tutorial|
-	Tutorial.create!(
-		title: "Sample Tutorial Post #{tutorial}",
-		body: "Welcome to my generic tutorial dummy information. Whether HTML, CSS, Javascript, Ruby, Rails, PHP, Node.JS, mongoDB, mysql, postgresql, React, and React Native tutorials that I will be not only offering but also I will be inclunding instructional how to tutorials on each of these subjects. Like always if you have any questions please comment below or go to the contact me page to message me directly. Enjoy and goodluck on your coding journey"
-	)
-end
-
-puts "10 sample tutorial posts created"
-
-5.times do |skill|
-	Skill.create!(
-		title: "Rails #{skill}",
-		level_percentage: 15
-		)
-end
-
-puts "5 sample skills created"
-
-16.times do |portfolio_item|
-	Portfolio.create!(
-		title: "Portfolio title: #{portfolio_item}",
-        subtitle: "My great service",
-        body: "Check out this portfolio section on each of these images. Please leave feedback in the contact me page. Thanks for checking out my website!!!",
-        main_image: "https://place-hold.it/640x360",
-        thumb_image: "https://place-hold.it/350x200"
+3.times do |topic|
+  Topic.create!(
+    title: "Topic #{topic}"
   )
 end
 
-put "16 sample portfolio items created"
+puts "3 Topics created"
+
+10.times do |tutorial|
+  Tutorial.create!(
+    title: "My Tutorial Post #{tutorial}",
+    body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+    topic_id: Topic.last.id
+  )
+end
+
+puts "10 tutorial posts created"
+
+5.times do |skill|
+  Skill.create!(
+    title: "Rails #{skill}",
+    level_percentage: 15
+  )
+end
+
+puts "5 skills created"
+
+8.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title: #{portfolio_item}",
+    subtitle: "Ruby on Rails",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    main_image: "https://place-hold.it/600x400",
+    thumb_image: "https://place-hold.it/350x200"
+  )
+end
+
+8.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title: #{portfolio_item}",
+    subtitle: "Angular",
+    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    main_image: "https://place-hold.it/600x400",
+    thumb_image: "https://place-hold.it/350x200"
+  )
+end
+
+puts "16 portfolio items created"

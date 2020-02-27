@@ -5,11 +5,14 @@ class TutorialsController < ApplicationController
   # GET /tutorials.json
   def index
     @tutorials = Tutorial.all
+    @page_title = "Edynak Tutorials"
   end
 
   # GET /tutorials/1
   # GET /tutorials/1.json
   def show
+    @page_title = @tutorial.title
+    @seo_keywords = @tutorial.body
   end
 
   # GET /tutorials/new

@@ -1,6 +1,6 @@
 class TutorialsController < ApplicationController
   before_action :set_tutorial, only: [:show, :edit, :update, :destroy, :toggle_status]
-
+  layout "tutorial"
   # GET /tutorials
   # GET /tutorials.json
   def index

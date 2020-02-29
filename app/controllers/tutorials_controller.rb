@@ -1,6 +1,7 @@
 class TutorialsController < ApplicationController
   before_action :set_tutorial, only: [:show, :edit, :update, :destroy, :toggle_status]
   layout "tutorial"
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
   # GET /tutorials
   # GET /tutorials.json
   def index

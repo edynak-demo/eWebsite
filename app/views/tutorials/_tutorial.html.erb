@@ -1,0 +1,9 @@
+<tr>
+  <td><%= tutorial.title.upcase %></td>
+  <td><%= tutorial.body %></td>
+  <td><%= link_to tutorial.status, toggle_status_tutorial_path(tutorial) %></td>
+  <td><%= link_to 'Show', tutorial %></td>
+  <td><%= link_to 'Edit', edit_tutorial_path(tutorial) %></td>
+  <td><%= link_to 'Delete Post', tutorial, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
+ 

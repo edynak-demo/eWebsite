@@ -4,6 +4,7 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>

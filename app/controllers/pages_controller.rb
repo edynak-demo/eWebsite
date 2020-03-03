@@ -7,10 +7,13 @@ class PagesController < ApplicationController
   def about
   end
 
-  def contact
+  def news
   end
 
-  def news
+  def services
+  end
+
+  def contact
   end
 
   def store

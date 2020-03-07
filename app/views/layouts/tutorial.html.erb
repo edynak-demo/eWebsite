@@ -18,17 +18,8 @@
   <body>
 
     <%= render 'shared/tutorial_nav' %>
+    <%= render 'shared/tutorial_masthead' %>
     
-
-    <!-- start of tutorial header -->
-    <div class="tutorial-header">
-      <div class="container">
-        <h1 class="tutorial-title">My Tutorials</h1>
-        <p class="lead tutorial-description">An example tutorial template built with Bootstrap.</p>
-        <%= link_to 'Write a New Tutorial', new_tutorial_path if logged_in?(:site_admin) %>
-      </div>
-    </div>
-    <!-- end of tutorial header -->
 
     
     <div class="container">
@@ -40,18 +31,11 @@
         <%= render 'shared/tutorial_sidebar' %>
 
       </div>
-        <!-- start of footer -->
-        <footer class="tutorial-footer">
-          <p>Tutorial template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          <p>
-            <a href="#">Back to top</a>
-          </p>
-        </footer>
-        <!-- end of footer -->
+       
+        <%= render 'shared/tutorial_footer' %>
 
         <%= source_helper("tutorial") %>
 
-        <%= @copyright %>
     </div>
   </body>
 </html>

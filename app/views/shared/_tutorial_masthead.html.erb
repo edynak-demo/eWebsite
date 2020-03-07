@@ -1,0 +1,7 @@
+<div class="tutorial-header">
+    <div class="container">
+    <h1 class="tutorial-title">My Tutorials</h1>
+    <p class="lead tutorial-description">An example tutorial template built with Bootstrap.</p>
+    <%= link_to 'Write a New Tutorial', new_tutorial_path if logged_in?(:site_admin) %>
+    </div>
+</div>

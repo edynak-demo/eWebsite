@@ -5,8 +5,8 @@ class TutorialsController < ApplicationController
   # GET /tutorials
   # GET /tutorials.json
   def index
-    @tutorials = Tutorial.all
-    @page_title = "Edynak Tutorials"
+    @tutorials = Tutorial.page(params[:page]).per(5)
+    @page_title = "My Portfolio Tutorials"
   end
 
   # GET /tutorials/1

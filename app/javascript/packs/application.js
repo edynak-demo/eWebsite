@@ -9,12 +9,14 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 require("bootstrap")
+require("packs/html.sortable")
 
 
 
 
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require popper
 //= require bootstrap-sprockets
 
